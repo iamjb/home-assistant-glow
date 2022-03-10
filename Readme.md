@@ -35,6 +35,26 @@ To make sure your meter will work with the Home Assistant Glow, you have to look
   <img width="60%" src="static/images/pulse_rate.png">
 </p>
 
+## Get Started
+
+We assume that you have already run the [ESPHome add-on]() and that you have assembled the Home Assistant Glow according to the information in [Hardware](#hardware). You can install the firmware in various ways, in this document I describe an easy solution and one for the more advanced users.
+
+### Easy Installation
+
+1. Visit the [ESPHome web tools website][webtools] of the Home Assistant Glow and follow the instructions.
+2. Click on the "**install**" button at the bottom.
+3. A list of serial devices will appear, now connect the ESP to your laptop/pc.
+4. You should now see a new device in the list and connect to it. If the connection is not successful, reconnect the ESP.
+5. In the next screen you will be asked for install confirmation, this does not contain the version of the Home Assistant Glow, but that of ESPHome.
+6. When flashing is successful, enter the `SSID` and `password` of your WiFi network.
+7. When your device is connected to your WiFi network, choose "**Add to Home Assistant**". Via a My link you will arrive at the integration page and click on "ok".
+
+### Advanced User
+
+1. In this repository you will find the file [home_assistant_glow.yaml][file], which you can copy into the `esphome` folder of your Home Assistant config.
+2. Adjust the value `pulse_rate` under **substitutions** to the value on your meter ([how do I find my imp/kWh rate?](#how-do-i-know-if-my-meter-is-supported)), by default the value is `1000` in the yaml file.
+3. Finally go through the installation wizard of ESPHome and flash the ESP32/8266.
+
 ## Hardware
 
 First, fill your 🛒 or see if you already have the components below.
@@ -72,10 +92,6 @@ How the status LED is connected to the ESP board of your choice. For each measur
 | GREEN  | D4 (GPIO4) | D2 (GPIO4)        |
 | BLUE   | D5 (GPIO5) | D1 (GPIO5)        |
 | GND    | GND        | GND               |
-
-## Get started
-
-Once you are done connecting all the hardware, we'll get started with the configuration for ESPHome. In this repository you will find the file [home_assistant_glow.yaml][file], which you can copy into the `esphome` folder of your Home Assistant config. Adjust the value `pulse_rate` under **substitutions** to the value on your meter ([how do I find my imp/kWh rate?](#how-do-i-know-if-my-meter-is-supported)), by default the value is `1000` in the yaml file. Finally go through the installation wizard of ESPHome and flash the ESP32/8266.
 
 ## FAQ
 
@@ -133,6 +149,7 @@ SOFTWARE.
 [nc]: https://www.nabucasa.com
 [energy]: https://home-assistant.io/docs/energy/
 [issue_34]: https://github.com/klaasnicolaas/home-assistant-glow/issues/34
+[webtools]: https://klaasnicolaas.github.io/home-assistant-glow
 
 <!-- Shields -->
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg

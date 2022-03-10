@@ -106,6 +106,7 @@ text_sensor:
   - platform: version
     hide_timestamp: true
     name: '${friendly_name} - ESPHome Version'
+  # WiFi info
   - platform: wifi_info
     ip_address:
       name: '${friendly_name} - IP Address'
