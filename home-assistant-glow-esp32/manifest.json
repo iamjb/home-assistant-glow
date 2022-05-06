@@ -1,0 +1,9 @@
+{
+  "chipFamily": "ESP32",
+  "parts": [
+    {
+      "path": "home-assistant-glow-esp32/home-assistant-glow-esp32.bin",
+      "offset": 0
+    }
+  ]
+}

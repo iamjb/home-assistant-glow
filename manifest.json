@@ -1,6 +1,6 @@
 {
   "name": "Home Assistant Glow",
-  "version": "2021.12.3",
+  "version": "2022.4.0",
   "home_assistant_domain": "esphome",
   "new_install_skip_erase": false,
   "builds": [
@@ -8,20 +8,8 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "home-assistant-glow/firmware.bin",
-          "offset": 65536
-        },
-        {
-          "path": "home-assistant-glow/bootloader_dio_40m.bin",
-          "offset": 4096
-        },
-        {
-          "path": "home-assistant-glow/partitions.bin",
-          "offset": 32768
-        },
-        {
-          "path": "home-assistant-glow/boot_app0.bin",
-          "offset": 57344
+          "path": "home-assistant-glow-esp32/home-assistant-glow-esp32.bin",
+          "offset": 0
         }
       ]
     }
